@@ -1,0 +1,25 @@
+import sqlite3
+connection = sqlite3.connect("pos.db")
+cursor = connection.cursor()
+cursor.execute("DROP TABLE IF EXISTS billitems")
+cursor.execute("DROP TABLE IF EXISTS products")
+command = "CREATE TABLE IF NOT EXISTS billitems(billno INTEGER, itemname TEXT, unitprice INTEGER, quantity INTEGER, totalprice INTEGER)"
+cursor.execute(command)
+command = "CREATE TABLE IF NOT EXISTS products(itemname TEXT, imagename TEXT, unitprice INTEGER)"
+cursor.execute(command)
+connection.commit()
+
+cursor = connection.execute("DELETE FROM products")
+connection.execute("INSERT INTO PRODUCTS VALUES('삼겹살\n(국내산)', '삼겹살.png', 2500)")
+connection.execute("INSERT INTO PRODUCTS VALUES('목살\n(국내산)', '돼지고기 목살.png', 2000)")
+connection.execute("INSERT INTO PRODUCTS VALUES('전지\n(국내산)', '앞다리살2.png', 1340)")
+connection.execute("INSERT INTO PRODUCTS VALUES('돼지갈비\n(국내산)', '돼지갈비.png', 1340)")
+connection.execute("INSERT INTO PRODUCTS VALUES('후지\n(국내산)', '뒷다리살.png', 340)")
+connection.execute("INSERT INTO PRODUCTS VALUES('한우국거리\n(국내산)', '한우국거리.png', 3340)")
+connection.execute("INSERT INTO PRODUCTS VALUES('한우사태\n(국내산)', '한우사태.png', 2840)")
+connection.execute("INSERT INTO PRODUCTS VALUES('한우우둔살\n(전감)(국내산)', '우둔살.png', 5000)")
+connection.execute("INSERT INTO PRODUCTS VALUES('한우 채끝등심\n(국내산)', '채끝2.png', 8000)")
+connection.execute("INSERT INTO PRODUCTS VALUES('한우꽃등심\n(국내산)', '한우 꽃등심.png', 9000)")
+connection.commit()
+connection.close()
+print("Database configured successfully")
