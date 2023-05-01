@@ -2,7 +2,7 @@
 Butcher shop meat sales receipts and item modifications were programmed with python qt.
 main
 :-:
-<video src='https://user-images.githubusercontent.com/115389450/235414846-aaf33715-12e9-4f76-8abf-295757aa1e7d.mp4' width=180/></video>
+<video src='https://user-images.githubusercontent.com/115389450/235415445-b89bc2e5-9e67-4938-8321-89de4f5cd384.mp4' width=180/></video>
 
 ![image](https://user-images.githubusercontent.com/115389450/235407060-59718f8e-10e8-4628-beea-9bd16530d636.png)
 ![image](https://user-images.githubusercontent.com/115389450/235407087-a3dcd265-ac9a-4a2e-a4db-26bbc2688896.png)
